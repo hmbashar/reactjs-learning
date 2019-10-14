@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.css';
 import Header from './components/Header';
+import Products from './components/products';
 
 
 class App extends Component {
@@ -35,11 +36,7 @@ class App extends Component {
         <Header/>        
         <h2>{this.state.siteTitle}</h2>
         <h3>Products</h3>
-        {
-          this.state.products.map((product) => (
-            <li key={product.id}>ID: {product.id}<br/>Name: {product.name}<br/> Description: {product.desc}</li>
-          ))
-        }
+        <Products items={this.state.products}/>
       </div>
     )
   }
