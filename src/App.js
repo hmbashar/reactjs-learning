@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Products from './components/products';
 
+var {btnStyle} = require('./styles.js');
 
 class App extends Component {
   state = {
@@ -54,10 +55,11 @@ class App extends Component {
         <form action="">
           <input type="text" placeholder="Name" onChange={this.testHandel}/>
         </form>
-        <button onClick={this.showProduct}>Show Product</button>
+        <button onClick={this.showProduct} style={btnStyle}>Show Product</button>
         {showProductMarkup}
       </div>
     )
   }
 }
+
 export default App;
